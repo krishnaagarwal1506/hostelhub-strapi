@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "todaymenus",
+  "info": {
+    "singularName": "todaymenu",
+    "pluralName": "todaymenus",
+    "displayName": "todaymenu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}

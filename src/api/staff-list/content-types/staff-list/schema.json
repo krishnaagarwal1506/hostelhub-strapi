@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_lists",
+  "info": {
+    "singularName": "staff-list",
+    "pluralName": "staff-lists",
+    "displayName": "StaffList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

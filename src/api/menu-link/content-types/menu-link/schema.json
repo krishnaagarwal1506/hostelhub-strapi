@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_links",
+  "info": {
+    "singularName": "menu-link",
+    "pluralName": "menu-links",
+    "displayName": "menuLink"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "room_infos",
+  "info": {
+    "singularName": "room-info",
+    "pluralName": "room-infos",
+    "displayName": "roomInfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}

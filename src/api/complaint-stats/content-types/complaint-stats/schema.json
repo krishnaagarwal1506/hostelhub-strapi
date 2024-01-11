@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "complaints_stats",
+  "info": {
+    "singularName": "complaint-stats",
+    "pluralName": "complaints-stats",
+    "displayName": "complaintStats"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "graphData": {
+      "type": "json"
+    }
+  }
+}

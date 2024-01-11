@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "room_status_graphs_data",
+  "info": {
+    "singularName": "room-status-graph-data",
+    "pluralName": "room-status-graphs-data",
+    "displayName": "roomStatusGraphData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "graphData": {
+      "type": "json"
+    }
+  }
+}

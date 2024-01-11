@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "dashboard_details",
+  "info": {
+    "singularName": "dashboard-detail",
+    "pluralName": "dashboard-details",
+    "displayName": "DashboardDetail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "json"
+    }
+  }
+}
