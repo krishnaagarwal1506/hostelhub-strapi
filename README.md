@@ -2,6 +2,19 @@
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
+### `Env file`
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=TuMeYLohsvpUN/pB1w+zRA==,vDcanRpTLIbo/QK7qb/8nQ==,3bJdbdPrtB+1Nc17jyiyzQ==,wDKqkJ+BLgiq4wkd/AMnBA==
+API_TOKEN_SALT=9uhm6m48v57Ld56EJrecPg==
+ADMIN_JWT_SECRET=QcE/jZ4IpFVVuMAkyNkAPQ==
+TRANSFER_TOKEN_SALT=CzFgAk37b25l9+816OkyMg==
+# Database
+DATABASE_CLIENT=sqlite
+DATABASE_FILENAME=.tmp/data.db
+JWT_SECRET=is9g6KsT5WlV4qOiJYw3fg==
+
+
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
