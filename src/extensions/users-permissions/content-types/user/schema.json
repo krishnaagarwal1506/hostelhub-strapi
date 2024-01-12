@@ -62,14 +62,14 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.role",
-      "mappedBy": "users",
+      "inversedBy": "users",
       "configurable": false
     },
     "student": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::student.student",
-      "mappedBy": "user"
+      "inversedBy": "user"
     }
   }
 }
