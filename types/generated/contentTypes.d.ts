@@ -775,6 +775,39 @@ export interface ApiDashboardDetailDashboardDetail extends Schema.SingleType {
   };
 }
 
+export interface ApiGymGym extends Schema.CollectionType {
+  collectionName: 'gyms';
+  info: {
+    singularName: 'gym';
+    pluralName: 'gyms';
+    displayName: 'Gym';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Email: Attribute.Email;
+    Fee: Attribute.Integer;
+    JoiningDate: Attribute.Date;
+    Duration: Attribute.Enumeration<
+      ['OneMonth', 'ThreeMonth', 'SixMonth', 'OneYear']
+    >;
+    student: Attribute.Relation<
+      'api::gym.gym',
+      'oneToOne',
+      'api::student.student'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::gym.gym', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::gym.gym', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMenuLinkMenuLink extends Schema.CollectionType {
   collectionName: 'menu_links';
   info: {
@@ -957,6 +990,7 @@ export interface ApiStudentStudent extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    Gym: Attribute.Relation<'api::student.student', 'oneToOne', 'api::gym.gym'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1024,6 +1058,7 @@ declare module '@strapi/types' {
       'api::complaint.complaint': ApiComplaintComplaint;
       'api::complaint-stats.complaint-stats': ApiComplaintStatsComplaintStats;
       'api::dashboard-detail.dashboard-detail': ApiDashboardDetailDashboardDetail;
+      'api::gym.gym': ApiGymGym;
       'api::menu-link.menu-link': ApiMenuLinkMenuLink;
       'api::notice.notice': ApiNoticeNotice;
       'api::room-info.room-info': ApiRoomInfoRoomInfo;

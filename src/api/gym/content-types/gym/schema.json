@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gyms",
+  "info": {
+    "singularName": "gym",
+    "pluralName": "gyms",
+    "displayName": "Gym",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email": {
+      "type": "email"
+    },
+    "Fee": {
+      "type": "integer"
+    },
+    "JoiningDate": {
+      "type": "date"
+    },
+    "Duration": {
+      "type": "enumeration",
+      "enum": [
+        "OneMonth",
+        "ThreeMonth",
+        "SixMonth",
+        "OneYear"
+      ]
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student",
+      "inversedBy": "Gym"
+    }
+  }
+}

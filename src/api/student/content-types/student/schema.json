@@ -56,6 +56,12 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "student"
+    },
+    "Gym": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gym.gym",
+      "mappedBy": "student"
     }
   }
 }
