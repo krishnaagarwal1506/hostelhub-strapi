@@ -687,6 +687,7 @@ export interface ApiComplaintComplaint extends Schema.CollectionType {
     singularName: 'complaint';
     pluralName: 'complaints';
     displayName: 'complaint';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -697,6 +698,11 @@ export interface ApiComplaintComplaint extends Schema.CollectionType {
     description: Attribute.String & Attribute.Required;
     status: Attribute.String & Attribute.Required;
     studentName: Attribute.String & Attribute.Required;
+    student: Attribute.Relation<
+      'api::complaint.complaint',
+      'manyToOne',
+      'api::student.student'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -956,6 +962,11 @@ export interface ApiStudentStudent extends Schema.CollectionType {
       'api::student.student',
       'oneToOne',
       'plugin::users-permissions.user'
+    >;
+    complaints: Attribute.Relation<
+      'api::student.student',
+      'oneToMany',
+      'api::complaint.complaint'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

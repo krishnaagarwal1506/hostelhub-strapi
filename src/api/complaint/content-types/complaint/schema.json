@@ -4,7 +4,8 @@
   "info": {
     "singularName": "complaint",
     "pluralName": "complaints",
-    "displayName": "complaint"
+    "displayName": "complaint",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,6 +31,12 @@
     "studentName": {
       "type": "string",
       "required": true
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "complaints"
     }
   }
 }
