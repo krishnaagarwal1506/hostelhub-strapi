@@ -62,6 +62,12 @@
       "relation": "oneToOne",
       "target": "api::gym.gym",
       "mappedBy": "student"
+    },
+    "complaints": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::complaint.complaint",
+      "mappedBy": "student"
     }
   }
 }
