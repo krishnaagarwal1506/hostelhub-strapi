@@ -68,6 +68,12 @@
       "relation": "oneToMany",
       "target": "api::complaint.complaint",
       "mappedBy": "student"
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::application.application",
+      "mappedBy": "student"
     }
   }
 }
