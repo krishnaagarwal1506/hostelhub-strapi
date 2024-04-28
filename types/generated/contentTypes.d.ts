@@ -681,6 +681,45 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiApplicationApplication extends Schema.CollectionType {
+  collectionName: 'applications';
+  info: {
+    singularName: 'application';
+    pluralName: 'applications';
+    displayName: 'Application';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    subject: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    student: Attribute.Relation<
+      'api::application.application',
+      'manyToOne',
+      'api::student.student'
+    >;
+    status: Attribute.Enumeration<['pending', 'approved', 'rejected']> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::application.application',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::application.application',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiComplaintComplaint extends Schema.CollectionType {
   collectionName: 'complaints';
   info: {
@@ -968,6 +1007,11 @@ export interface ApiStudentStudent extends Schema.CollectionType {
       'oneToMany',
       'api::complaint.complaint'
     >;
+    applications: Attribute.Relation<
+      'api::student.student',
+      'oneToMany',
+      'api::application.application'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1032,6 +1076,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::application.application': ApiApplicationApplication;
       'api::complaint.complaint': ApiComplaintComplaint;
       'api::complaint-stats.complaint-stats': ApiComplaintStatsComplaintStats;
       'api::dashboard-detail.dashboard-detail': ApiDashboardDetailDashboardDetail;
