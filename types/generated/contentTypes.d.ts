@@ -702,6 +702,7 @@ export interface ApiApplicationApplication extends Schema.CollectionType {
     >;
     status: Attribute.Enumeration<['pending', 'approved', 'rejected']> &
       Attribute.Required;
+    document: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

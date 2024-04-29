@@ -34,6 +34,9 @@
         "rejected"
       ],
       "required": true
+    },
+    "document": {
+      "type": "text"
     }
   }
 }
